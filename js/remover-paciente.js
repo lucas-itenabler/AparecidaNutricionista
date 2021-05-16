@@ -1,9 +1,21 @@
 var paciente = document.querySelectorAll(".paciente");
 
-pacientes.forEach(function(paciente){
+var tabela = document.querySelector("table");
 
-    paciente.addEventListener("dblclick", function(){
-        this.remove();
-    });
+tabela.addEventListener("dblclick", function(event){
 
-});
+
+    event.target.parentNode.classList.add("fadeOut");
+
+    setTimeout(function(){
+        event.target.parentNode.remove(); 
+    },500);
+    
+
+    /*var alvoEvento = event.target;
+    var paiDoAlvo = alvoEvento.parentNode;   -- Essas 3 linhas fazem o mesmo que a linha 11
+    paiDoAlvo.remove();
+    */
+    
+
+})
